@@ -1,27 +1,36 @@
+#include <stdlib.h>
+#include <stdio.h>
 #include "main.h"
+
 /**
- * _strncpy - copy a string
- * @dest: input value
- * @src: input value
- * @n: input value
+ * _strncpy - Entry point
+ * @dest: Pointer var 1
+ * @src: Pointer var 2
+ * @n: String count
  *
- * Return: dest
+ * Description: Add question here
+ * Return: 0 (success) and 1 (failure) to execute
  */
 char *_strncpy(char *dest, char *src, int n)
 {
-        	int j;
- 
-        	j = 0;
-        	while (j < n && src[j] != '\0')
-        	{
-                    	dest[j] = src[j];
-                    	j++;
-        	}
-        	while (j < n)
-        	{
-                    	dest[j] = '\0';
-                    	j++;
-        	}
- 
-        	return (dest);
+	int i = 0;
+
+	while (*(src + i) || i < n)
+	{
+		if (*(src + i) && i < n)
+			*(dest + i) = *(src + i);
+		else if (i < n)
+			dest[i] = '\0';
+		i++;
+	}
+
+	while (*(dest + i))
+	{
+		i++;
+	}
+
+	*(dest + i) = '\0';
+
+	return (dest);
 }
+

@@ -1,22 +1,25 @@
+#include <stdlib.h>
+#include <stdio.h>
 #include "main.h"
 
 /**
- * _memset - Fills a block of memory with a specific value.
- * @s: Starting address of memory to be filled.
- * @b: The desired value.
- * @n: Number of bytes to be changed.
+ * _memset - Entry point
+ * @s: String pointer
+ * @b: Replacement byte
+ * @n: Number of replacements
  *
- * Return: A pointer to the memory area @s.
+ * Description: Add question here
+ * Return: String pointer s
  */
 char *_memset(char *s, char b, unsigned int n)
 {
-	int a = 0;
+	unsigned int i;
 
-	for (; n > 0; a++)
+	for (i = 0; i < n; i++)
 	{
-		s[a] = b;
-		n--;
+		s[i] = b;
 	}
 
 	return (s);
 }
+

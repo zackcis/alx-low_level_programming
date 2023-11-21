@@ -1,13 +1,21 @@
+#include <stdlib.h>
+#include <stdio.h>
 #include "main.h"
-void _puts(char *str)
-#include<stdio.h>
+
 /**
- * main - Entry point
+ * _puts - Prints string
+ * @str: The string to be printed
  *
- * Return: Always 0 (Success)
+ * Description: I do not fear computers. I fear the lack of them.
+ * Return: 0 (success) and 1 (failure) to execute
  */
-int main(void)
+void _puts(char *str)
 {
-        	puts("\"Programming is like building a multilingual puzzle");
-        	return (0);
+	int i = 0;
+
+	while (*(str + i) != '\0')
+	{
+		_putchar(*(str + i++));
+	}
+	_putchar('\n');
 }

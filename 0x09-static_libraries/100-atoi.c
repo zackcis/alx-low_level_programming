@@ -1,29 +1,15 @@
+#include <stdlib.h>
+#include <stdio.h>
 #include "main.h"
 
 /**
- * _atoi - Converts a string into an integer.
- * @s: The string to use.
+ * _atoi - Short statement of function purpose
+ * @s: Info on argc.
  *
- * Return: The integer value.
+ * Description: Describe in detail how the function works here
+ * Return: 0 (success) and 1 (failure).
  */
 int _atoi(char *s)
 {
-	int sign = 1, i = 0;
-	unsigned int res = 0;
-
-	while (!(s[i] <= '9' && s[i] >= '0') && s[i] != '\0')
-	{
-		if (s[i] == '-')
-			sign *= -1;
-		i++;
-	}
-
-	while (s[i] <= '9' && (s[i] >= '0' && s[i] != '\0'))
-	{
-		res = (res * 10) + (s[i] - '0');
-		i++;
-	}
-
-	res *= sign;
-	return (res);
+	return (0);
 }

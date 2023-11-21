@@ -1,28 +1,36 @@
+#include <stdlib.h>
+#include <stdio.h>
 #include "main.h"
+
 /**
  * _strspn - Entry point
- * @s: input
- * @accept: input
- * Return: Always 0 (Success)
+ * @s: search source
+ * @accept: Values to search for
+ *
+ * Description: Add question here
+ * Return: Number of matches
  */
 unsigned int _strspn(char *s, char *accept)
 {
-        	unsigned int n = 0;
-        	int r;
- 
-        	while (*s)
-        	{
-                    	for (r = 0; accept[r]; r++)
-                    	{
-                                	if (*s == accept[r])
-                                	{
-                                            	n++;
-                                            	break;
-                                	}
-                                	else if (accept[r + 1] == '\0')
-                                            	return (n);
-                    	}
-                    	s++;
-        	}
-        	return (n);
+	int n = 0, i = 0, j = 0, k;
+
+	while (s[i])
+	{
+		k = n;
+		j = 0;
+		while (accept[j])
+		{
+			if (accept[j] == s[i])
+			{
+				n++;
+			}
+			j++;
+		}
+		i++;
+		if (k == n)
+		{
+			return (n);
+		}
+	}
+	return (0);
 }
